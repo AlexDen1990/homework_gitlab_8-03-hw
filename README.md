@@ -53,4 +53,4 @@ systemctl restart zabbix-server apache2
 systemctl enable zabbix-server apache2
 
 # Скриншот авторизации в админке
-![alt text] (https://github.com/AlexDen1990/homework_gitlab_8-03-hw/blob/main/img/1.jpg)
+![alt text](https://github.com/AlexDen1990/homework_gitlab_8-03-hw/blob/main/img/1.jpg)
