@@ -12,7 +12,7 @@
 
 ### Ответ: 
 
-
+![alt text](https://github.com/AlexDen1990/homework_gitlab_8-03-hw/blob/main/img/2-1.png)
 
 # Задание 1. Установите Zabbix Server с веб-интерфейсом
 
