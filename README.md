@@ -9,82 +9,13 @@
 
 # Задание 2. Добавьте в Zabbix два хоста и задайте им имена <фамилия и инициалы-1> и <фамилия и инициалы-2>. Например: ivanovii-1 и ivanovii-2.
 
-### Ответ:
+# Задание 3. Привяжите созданный шаблон к двум хостам. Также привяжите к обоим хостам шаблон Linux by Zabbix Agent.
+
+### Ответ на задание 2 и 3:
 ![alt text](https://github.com/AlexDen1990/homework_gitlab_8-03-hw/blob/main/img/2-2-3(1).png)
 
+# Задание 4. Создайте свой кастомный дашборд.
 
-sudo apt install postgresql
+### Ответ: 
 
-
-### 2. Установка и распаковка репозитория
-
-wget https://repo.zabbix.com/zabbix/6.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_6.0+ubuntu24.04_all.deb
-
-dpkg -i zabbix-release_latest_6.0+ubuntu24.04_all.deb
-
-apt update
-
-### 3. Установка заббикс сервера, веб-интерфейса
-
-apt install zabbix-server-pgsql zabbix-frontend-php php7.4-pgsql zabbix-apache-conf zabbix-sql-scripts
-
-### 4. Создание базы данных и пользователя
-
-sudo -u postgres createuser --pwprompt zabbix
-
-sudo -u postgres createdb -O zabbix zabbix
-
-
-### 5. Импорт данных на сервер Zabbix
-
-zcat /usr/share/zabbix-sql-scripts/postgresql/server.sql.gz | sudo -u zabbix psql zabbix
-
-
-### 6. Настройка пароля бызы данных
-
-nano /etc/zabbix/zabbix_server.conf далее в файле напротив DBPassword= указываем наш пароль
-
-
-### 7. Рестарт и добавление в автозагрузку веб сервера и Заббикс сервера
-
-systemctl restart zabbix-server apache2
-
-systemctl enable zabbix-server apache2
-
-### Скриншот авторизации в админке
-
-![alt text](https://github.com/AlexDen1990/homework_gitlab_8-03-hw/blob/main/img/1.png)
-
----
-
-# Задание 2. Установка Zabbix Agent на два хоста
-
-В качестве одного из хостов использована машина с Zabbix серверо, в качестве второго - чистая ВМ.
-
-### 1. Установка заббикс агента
-
-sudo apt install zabbix-agent
-
-
-### 2. Рестарт и добавление в автозагрузку Заббикс агента
-
-systemctl restart zabbix-agent
-
-systemctl enable zabbix-agent
-
-
-### 3. Настраиваем параметры подключения заббикс агента к серверу (прописываем адреса хостов)
-
-sed -i 's/Server=127.0.0.1/Server=192.168.1.43/g' /etc/zabbix/zabbix_agent.conf
-
-sed -i 's/Server=127.0.0.1/Server=192.168.1.46/g' /etc/zabbix/zabbix_agent.con
-
-### Скриншот раздела Узлы сети
-![alt text](https://github.com/AlexDen1990/homework_gitlab_8-03-hw/blob/main/img/2.png)
-
-### Cкриншот лога zabbix agent, где видно, что он работает с сервером
-![alt text](https://github.com/AlexDen1990/homework_gitlab_8-03-hw/blob/main/img/4.png)
-
-### Cкриншот раздела Мониторинг > последние данные для обоих VM машин, где видны поступающие от агентов данные.
-![alt text](https://github.com/AlexDen1990/homework_gitlab_8-03-hw/blob/main/img/3.png)
-
+![alt text](https://github.com/AlexDen1990/homework_gitlab_8-03-hw/blob/main/img/5.png)
