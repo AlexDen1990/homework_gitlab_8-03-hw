@@ -86,7 +86,7 @@ Backup записывается в файл:
 ### /tmp/backup/vm/backup.log
 
 
-![2.3](https://github.com/AlexDen1990/homework_gitlab_8-03-hw/blob/main/4-9.jpg)
+![2.3](https://github.com/AlexDen1990/homework_gitlab_8-03-hw/blob/main/5-9.jpg)
 
 ![2.4](https://github.com/AlexDen1990/homework_gitlab_8-03-hw/blob/main/3-9.jpg)
 
